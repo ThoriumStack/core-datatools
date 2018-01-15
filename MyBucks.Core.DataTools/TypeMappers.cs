@@ -72,7 +72,7 @@ namespace MyBucks.Core.DataTools
             return newList;
         }
 
-        public static TDestination GetNewPopulatedObject<TDestination>(object sourceObject)
+        public static TDestination GetNewPopulatedObject<TSource, TDestination>(TSource sourceObject)
            where TDestination : new()
         {
             var newObject = new TDestination();

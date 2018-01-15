@@ -34,7 +34,7 @@ namespace MyBucks.Core.DataTools
                 reply.ResultList = new List<TViewModel>();
                 return reply;
             }
-            reply.ResultList = queryData.Skip(pageNumber * pageSize).Take(pageSize).ToList().Select(c => TypeMapper.GetNewPopulatedObject<TViewModel>(c)).ToList();
+            reply.ResultList = queryData.Skip(pageNumber * pageSize).Take(pageSize).ToList().Select(TypeMapper.GetNewPopulatedObject<TQuery, TViewModel>).ToList();
             return reply;
         }
 
