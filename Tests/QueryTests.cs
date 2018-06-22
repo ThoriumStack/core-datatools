@@ -22,8 +22,8 @@ namespace Tests
             Assert.NotEmpty(qry.ResultList);
             Assert.Equal("Num 9", qry.ResultList[9].MyVal); 
             Assert.Equal(10, qry.ResultList.Count);
-            Assert.Equal(13, qry.TotalPageCount);
-            Assert.Equal(122,qry.TotalRecordCount);
+            Assert.Equal(13, qry.TotalPages);
+            Assert.Equal(122,qry.TotalItems);
 
         }
 

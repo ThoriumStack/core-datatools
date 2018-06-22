@@ -1,11 +1,10 @@
-﻿using MyBucks.Core.DataTools.Models;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using MyBucks.Core.Model;
 
 namespace MyBucks.Core.DataTools
 {
-    public class QueryModifiers
+    public static class QueryModifiers
     {
         /// <summary>
         /// Turn any query data into paged data. Your query must be ordered first.
@@ -16,21 +15,21 @@ namespace MyBucks.Core.DataTools
         /// <param name="pageNumber"></param>
         /// <param name="pageSize"></param>
         /// <returns></returns>
-        public static PaginatedReportReply<TViewModel> Paginate<TQuery, TViewModel>(IQueryable<TQuery> queryData, int pageNumber, int pageSize) where TViewModel : new()
+        public static PaginatedListReply<TViewModel> Paginate<TQuery, TViewModel>(IQueryable<TQuery> queryData, int pageNumber, int pageSize) where TViewModel : new()
         {
-            var reply = new PaginatedReportReply<TViewModel>();
-            reply.TotalRecordCount = queryData.Count();
+            var reply = new PaginatedListReply<TViewModel>();
+            reply.TotalItems = queryData.Count();
             if (pageSize == 0)
             {
-                pageSize = reply.TotalRecordCount;
+                pageSize = reply.TotalItems;
             }
-            if (reply.TotalRecordCount > 0)
+            if (reply.TotalItems > 0)
             {
-                reply.TotalPageCount = reply.TotalRecordCount / pageSize + (reply.TotalRecordCount % pageSize > 0 ? 1 : 0);
+                reply.TotalPages = reply.TotalItems / pageSize + (reply.TotalItems % pageSize > 0 ? 1 : 0);
             }
             else
             {
-                reply.TotalPageCount = 0;
+                reply.TotalPages = 0;
                 reply.ResultList = new List<TViewModel>();
                 return reply;
             }
