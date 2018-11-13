@@ -15,7 +15,7 @@ namespace MyBucks.Core.DataTools
         /// <param name="pageNumber"></param>
         /// <param name="pageSize"></param>
         /// <returns></returns>
-        public static PaginatedListReply<TViewModel> Paginate<TQuery, TViewModel>(IQueryable<TQuery> queryData, int pageNumber, int pageSize) where TViewModel : new()
+        public static PaginatedListReply<TViewModel> Paginate<TQuery, TViewModel>(this IQueryable<TQuery> queryData, int pageNumber, int pageSize) where TViewModel : new()
         {
             var reply = new PaginatedListReply<TViewModel>();
             reply.TotalItems = queryData.Count();
