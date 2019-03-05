@@ -1,10 +1,9 @@
 using System.Linq;
-using MyBucks.Core.DataTools.Model;
-using MyBucks.Core.Model;
 using System.Linq.Dynamic.Core;
+using MyBucks.Core.Model;
+using Thorium.Core.DataTools.Model;
 
-
-namespace MyBucks.Core.DataTools
+namespace Thorium.Core.DataTools
 {
     public static class SearchParameterExtensions
     {

@@ -1,9 +1,7 @@
-﻿using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using AutoMapper;
 
-namespace MyBucks.Core.DataTools
+namespace Thorium.Core.DataTools
 {
     public static class TypeMapper
     {
@@ -33,7 +31,7 @@ namespace MyBucks.Core.DataTools
 
         public static TDestination MapSingleSkipNullOrEmpty<TSource, TDestination>(TSource source, TDestination destination)
         {
-            // todo: cache maps?
+          
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<TSource, TDestination>();

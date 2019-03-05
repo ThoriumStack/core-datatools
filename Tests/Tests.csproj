@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
@@ -14,13 +14,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MyBucks.Core.DataTools\MyBucks.Core.DataTools.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="MyBucks.Core.Model">
       <HintPath>..\..\..\..\.nuget\packages\mybucks.core.model\1.0.9\lib\netstandard2.0\MyBucks.Core.Model.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Thorium.Core.DataTools\Thorium.Core.DataTools.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-namespace MyBucks.Core.DataTools.Model
+namespace Thorium.Core.DataTools.Model
 {
     public class SearchParameters
     {

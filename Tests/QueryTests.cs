@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MyBucks.Core.DataTools;
+using Thorium.Core.DataTools;
 using Xunit;
 
 namespace Tests

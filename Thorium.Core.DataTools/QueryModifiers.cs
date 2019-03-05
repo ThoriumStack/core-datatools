@@ -2,7 +2,7 @@
 using System.Linq;
 using MyBucks.Core.Model;
 
-namespace MyBucks.Core.DataTools
+namespace Thorium.Core.DataTools
 {
     public static class QueryModifiers
     {
