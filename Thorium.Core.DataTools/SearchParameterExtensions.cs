@@ -1,7 +1,7 @@
 using System.Linq;
 using System.Linq.Dynamic.Core;
-using MyBucks.Core.Model;
 using Thorium.Core.DataTools.Model;
+using Thorium.Core.Model;
 
 namespace Thorium.Core.DataTools
 {

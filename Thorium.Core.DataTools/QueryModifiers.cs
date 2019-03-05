@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using MyBucks.Core.Model;
+using Thorium.Core.Model;
 
 namespace Thorium.Core.DataTools
 {
